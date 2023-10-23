@@ -1,0 +1,25 @@
+
+Information about PT-api calls.
+PT api calls:
+
+For booking a PT at a specific timeslot, you should do the following:
+
+Do a POST call to 'api/{brand}/book-pt'
+with a json body:
+
+{
+	"pt-name": "{name}",
+	"date": "{date}"
+}
+
+Where date is in the format of "dd-MM-yyyy".
+
+
+Fetching information about suggested training schedules:
+
+If a member would like to know how many days per week they should train, and a suggested schedule to keep:
+
+Do a GET call to 'api/{brand}/training-info/?training-difficulty=""'
+
+Where 'training-difficulty' can be 'easy', 'medium', 'intermediate', or 'hard'.
+
